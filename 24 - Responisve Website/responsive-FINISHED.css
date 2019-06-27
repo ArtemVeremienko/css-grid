@@ -24,7 +24,7 @@ img {
   grid-gap: 20px;
   grid-template-areas:
     "hero hero cta1"
-    "hero hero cta2"
+    "hero hero cta2";
 }
 
 .hero {
@@ -108,12 +108,13 @@ img {
   padding: 10px;
   border: 1px solid white;
   text-align: center;
-  box-shadow: 0 0 4px  rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
 .feature .icon {
   font-size: 50px;
 }
+
 .feature p {
   color: rgba(0,0,0,0.5);
 }
@@ -122,7 +123,7 @@ img {
 
 .about {
   background: white;
-  padding:50px;
+  padding: 50px;
   display: grid;
   grid-template-columns: 400px 1fr;
   align-items: center;
@@ -148,14 +149,14 @@ img {
   align-items: center;
 }
 
-.gallery h2:before, .gallery h2:after {
+.gallery h2::before, .gallery h2::after {
   display: block;
   content: '';
   height: 10px;
   background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
 }
 
-.gallery h2:after {
+.gallery h2::after {
   --direction: right;
 }
 
@@ -164,6 +165,7 @@ img {
     order: -1;
     perspective: 800px;
   }
+
   [aria-controls="menu-list"] {
     display: block;
     margin-bottom: 10px;
@@ -193,14 +195,13 @@ img {
   [aria-expanded="true"] .open {
     display: none;
   }
-
 }
 
 @media (max-width: 700px) {
   .top {
     grid-template-areas:
       "hero hero"
-      "cta1 cta2"
+      "cta1 cta2";
   }
   /* About */
   .about {
@@ -213,6 +214,6 @@ img {
     grid-template-areas:
       "hero"
       "cta1"
-      "cta2"
+      "cta2";
   }
 }
